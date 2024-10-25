@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "@prisma/client": "^5.21.1",
+    "@solid-primitives/rootless": "^1.4.5",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.14.10",
     "@solidjs/start": "^1.0.9",
     "prisma": "^5.21.1",
-    "solid-realtime": "file:../realtime",
     "solid-js": "^1.9.2",
+    "solid-realtime": "file:../realtime",
     "tsx": "^4.19.1",
     "vinxi": "^0.4.3"
   },
