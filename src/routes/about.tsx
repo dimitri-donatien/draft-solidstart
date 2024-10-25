@@ -1,10 +1,11 @@
 import { Title } from "@solidjs/meta";
 import { createEffect, For } from "solid-js";
-import storeSignal from "../lib/db";
+import { useStore } from "../lib/db";
 //import { useStore } from "../lib/db";
 
 export default function Home() {
-  const [count, setCount] = storeSignal;
+  //const [count, setCount] = storeSignal;
+  const { state, actions } = useStore();
   // createEffect(() => {
   //   console.log("TEST STORE", test);
   // });
@@ -16,7 +17,7 @@ export default function Home() {
       <h1>About</h1>
       <p>This is the about page.</p>
 
-      <button onClick={() => setCount((x) => x + 1)}>{count()}</button>
+      <button onClick={actions.increment}>{state.count}</button>
 
       {/* <For each={test.store.countries}>
         {(country: any) => (
